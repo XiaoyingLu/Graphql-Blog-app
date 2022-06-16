@@ -14,7 +14,7 @@ export const typeDefs = gql`
       name: String!
       bio: String!
     ): AuthPayload!
-    signin(credentials: CredentialInput!)
+    signin(credentials: CredentialInput!): AuthPayload!
   }
 
   type Post {
