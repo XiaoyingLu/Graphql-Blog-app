@@ -1,5 +1,5 @@
 import { useMutation, gql } from "@apollo/client";
-import Button from "@restart/ui/esm/Button";
+import Button from 'react-bootstrap/Button';
 import React, { useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
 
@@ -45,6 +45,7 @@ export default function Signup() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    console.log(data);
     if (data) {
       if (data.signup.userErrors.length) {
         setError(data.signup.userErrors[0].message);
